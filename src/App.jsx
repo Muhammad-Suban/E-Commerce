@@ -1,16 +1,16 @@
-import { useState } from 'react'
-  import './App.css'
+import "./App.css";
+import Navbar from "./components/navbar";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-    <h1 className="text-6xl font-bold underline">
-    Hello world!
-  </h1>
+      <Navbar />
+      <main>
+        <Outlet/>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
