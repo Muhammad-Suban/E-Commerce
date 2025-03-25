@@ -1,13 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { Star } from "lucide-react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { fetchedProductById } from "../utils/api";
 
 const ProductPage = () => {
   const { id } = useParams();
   const [productData, setProductData] = useState(null);
 
- 
+  useEffect(() => {
+    (async () => {
+      try {
+       const data = await fetchedProductById(id)
+        setProductData(data);
+      } catch (error) {
+        console.error(error);
+      }
+    })();
+  }, [id]);
+
   if (!productData) {
     return <div className="text-center py-20 text-xl">Loading...</div>;
   }

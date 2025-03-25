@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="m-10 p-5">
+        <div className="m-10 p-5">
       <main>
         <Outlet/>
       </main>

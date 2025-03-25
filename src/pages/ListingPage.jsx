@@ -1,11 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { fetchedProducts } from "../utils/api";
+import { useNavigate } from "react-router-dom";
 
 const ListingPage = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    (async () => {
+      try {
+
+       const data = await fetchedProducts()
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    })();
+  }, []);
 
   return (
     <div className="container mx-auto px-4">
