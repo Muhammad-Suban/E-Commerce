@@ -10,7 +10,6 @@ const ListingPage = () => {
   useEffect(() => {
     (async () => {
       try {
-
        const data = await fetchedProducts()
         setProducts(data);
       } catch (error) {

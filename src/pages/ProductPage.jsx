@@ -62,7 +62,7 @@ const ProductPage = () => {
 
           {/* Description */}
           <p className="text-gray-800">{productData.description}</p>
-
+ 
           {/* Buy Button */}
           <button className="mt-4 px-6 py-3 bg-gradient-to-r from-blue-800 to-gray-800 text-white rounded-md shadow-lg hover:opacity-90 transition-all">
             Buy Now

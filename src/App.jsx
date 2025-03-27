@@ -9,9 +9,11 @@ function App() {
       <Navbar />
       <div className="m-10 p-5">
         <main>
+          {/* This renders the current route's component  */}
           <Outlet />
         </main>
       </div>
+
       <Footer />
     </>
   );

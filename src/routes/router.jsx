@@ -3,6 +3,7 @@ import { ListingPage, ProductPage } from "../pages/index";
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 
+// Define application routes
 const router = createBrowserRouter([
   {
     path: "/",
